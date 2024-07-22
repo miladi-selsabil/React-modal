@@ -13,23 +13,27 @@ Pour installer ce composant, utilisez la commande suivante :
 puis importez le composant Modal dans votre composant parent comme dans l'exemple ci-dessous :
 
 ```
-import React from "react";
-import "./Modal.css";
+import React from 'react';
+import { Modal } from 'modal-component-selsabil'; 
 
-const Modal = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
+function App() {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <button onClick={onClose}>Close</button>
-        {children}
-      </div>
+    <div>
+      <button onClick={openModal}>Open Modal</button>
+      <Modal isOpen={isOpen} onClose={closeModal}>
+        <p>This is the modal content!</p>
+      </Modal>
     </div>
   );
-};
+}
 
-export default Modal;
+export default App;
+
 
 ```
 
