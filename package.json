@@ -2,52 +2,49 @@
   "name": "modal-component",
   "version": "0.1.0",
   "private": false,
-  "dependencies": {
+  "description": "A reusable modal component for React applications.",
+  "main": "dist/Modal.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "babel src --out-dir dist --extensions \".js,.jsx\" --copy-files",
+    "test": "react-scripts test",
+    "prepublishOnly": "npm run build",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miladi-selsabil/React-modal"
+  },
+  "keywords": [
+    "react",
+    "modal",
+    "ui component",
+    "react component"
+  ],
+  "author": "Selsabil Miladi",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.24.9",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-scripts": "5.0.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
- "peerDependencies": {
-  "react": "^18.3.1",
-  "react-dom": "^18.3.1"
-},
-"devDependencies": {
-  "@testing-library/jest-dom": "^5.17.0",
-  "@testing-library/react": "^13.4.0",
-  "@testing-library/user-event": "^13.5.0",
-  "react-scripts": "5.0.1",
-  "web-vitals": "^2.1.4",
-  "@babel/cli": "^7.24.8",
-  "@babel/core": "^7.24.9",
-  "@babel/preset-env": "^7.24.8",
-  "@babel/preset-react": "^7.24.7"
-}
+  }
 }
